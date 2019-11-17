@@ -1,0 +1,17 @@
+FROM gcr.io/google-appengine/python
+
+RUN virtualenv --python=python3.4 /env
+
+ENV VIRTUAL_ENV /env
+ENV PATH /env/bin:$PATH
+
+RUN . /env/bin/activate
+
+ADD requirements.txt /app/requirements.txt
+
+RUN pip install --upgrade pip
+
+#RUN pip install -r /app/requirements.txt
+
+ADD mysite /app
+

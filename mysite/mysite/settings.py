@@ -25,7 +25,10 @@ SECRET_KEY = '!frp2j20cr+r(j3qs_-id_ydbh8pr--vc-leo-^bryp5i_dqy!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#from socket import gethostname, gethostbyname 
+#ALLOWED_HOSTS = [ gethostname(), gethostbyname(gethostname())] 
+
+ALLOWED_HOSTS = ['35.222.53.186', '104.198.164.5']
 
 
 # Application definition
@@ -81,10 +84,10 @@ DATABASES = {
     },
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ssp',
+        'NAME': 'dsp_dev',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': '35.223.243.197',
         'PORT': '5432',
     }
 }
